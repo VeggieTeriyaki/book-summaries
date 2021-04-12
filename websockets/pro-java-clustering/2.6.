@@ -1,0 +1,8 @@
+# Relationship between domain and architecture
+There needs to be some technological questions based on domain. For example, lets consider a search engine use case: 
+* Does a search engine generate more reads or writes? More reads, so focus on DBMS that allow for fast reads
+* The search for a search engine needs to be smarter than a SQL `LIKE` statement. (hint hint ES)
+* In order to scale horizontally and increase read performance, we need a distributed system that includes a replication strategy.
+In this case, ElasticSearch seems like a good technology to use.
+
+Basically, we need to make proper architecture decisions based not only on current needs, but also needs in the future.
